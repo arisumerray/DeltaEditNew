@@ -12,9 +12,9 @@ class TrainLatentsDataset(Dataset):
         clip_latents_list = []
         wplus_latents_list = []
 
-        style_latents_list.append(torch.Tensor(np.load(f"/home/jovyan/shares/SR006.nfs2/shalamkova/HairFastTrainerFork/latent_code/ffhq/sspace_noise_feat.npy")))
-        clip_latents_list.append(torch.Tensor(np.load(f"/home/jovyan/shares/SR006.nfs2/shalamkova/HairFastTrainerFork/latent_code/ffhq/cspace_noise_feat.npy")))
-        wplus_latents_list.append(torch.Tensor(np.load(f"/home/jovyan/shares/SR006.nfs2/shalamkova/HairFastTrainerFork/latent_code/ffhq/wspace_noise_feat.npy")))
+        style_latents_list.append(torch.Tensor(np.load(f"./latent_code/{opts.classname}/sspace_noise_feat.npy")))
+        clip_latents_list.append(torch.Tensor(np.load(f"./latent_code/{opts.classname}/cspace_noise_feat.npy")))
+        wplus_latents_list.append(torch.Tensor(np.load(f"./latent_code/{opts.classname}/wspace_noise_feat.npy")))
         
         style_latents_list.append(torch.Tensor(np.load(f"./latent_code/{opts.classname}/sspace_ffhq_feat.npy")))
         clip_latents_list.append(torch.Tensor(np.load(f"./latent_code/{opts.classname}/cspace_ffhq_feat.npy")))

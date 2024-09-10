@@ -134,6 +134,7 @@ def main(opts):
                   face_image = image[y-(0 if y<int(0.2*h) else int(0.2*h)):y+h+(0 if y+int(1.2*h)>image.shape[0] else int(0.2*h)),
                                      x-(0 if x<int(0.2*w) else int(0.2*w)):x+w+(0 if x+int(1.2*w)>image.shape[1] else int(0.2*w))]
                   face_pil = Image.fromarray(cv2.cvtColor(face_image, cv2.COLOR_BGR2RGB))
+                  face_pil.save('face'+filename)
                   face_resized = face_pil.resize((256, 256))
                   face_resized.save(os.path.join(save_folder_path,filename))
           else:
